@@ -1,0 +1,64 @@
+{
+  "name": "easy-utils",
+  "version": "1.0.0",
+  "description": "一个辅助编码的小工具库",
+  "keywords": [
+    "easy-tools-utils",
+    "utils",
+    "tools",
+    "js utils",
+    "ts utils",
+    "js tools",
+    "ts tools",
+    "typescript",
+    "undefined",
+    "NaN"
+  ],
+  "author": "Dante-Master <396840617@qq.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DXDante/easy-utils.git"
+  },
+  "homepage": "https://github.com/DXDante/easy-utils#readme",
+  "bugs": "https://github.com/DXDante/easy-utils/issues",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist",
+    "!dist/**/*.map",
+    "etc",
+    "temp",
+    "README.md",
+    "package.json"
+  ],
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "browser": "dist/index.min.js",
+  "types": "dist/typings/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/typings/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./dist/*": "./dist/*"
+  },
+  "scripts": {
+    "build": "rollup -c && api-extractor run -l --diagnostics"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.34.4",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.1",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "eslint": "^8.38.0",
+    "prettier": "^2.8.7",
+    "rollup": "^3.20.2",
+    "tslib": "^2.5.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+  }
+}
